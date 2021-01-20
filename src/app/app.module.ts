@@ -11,6 +11,7 @@ import { LibraryListComponent } from './header/library/library-list/library-list
 import { EditLibraryListComponent } from './header/library/edit-library-list/edit-library-list.component';
 import { WishlistListComponent } from './header/wishlist/wishlist-list/wishlist-list.component';
 import { EditWishlistComponent } from './header/wishlist/edit-wishlist/edit-wishlist.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EditWishlistComponent } from './header/wishlist/edit-wishlist/edit-wish
     LibraryListComponent,
     EditLibraryListComponent,
     WishlistListComponent,
-    EditWishlistComponent
+    EditWishlistComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule
