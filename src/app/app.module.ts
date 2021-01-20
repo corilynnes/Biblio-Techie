@@ -12,7 +12,17 @@ import { EditLibraryListComponent } from './header/library/edit-library-list/edi
 import { WishlistListComponent } from './header/wishlist/wishlist-list/wishlist-list.component';
 import { EditWishlistComponent } from './header/wishlist/edit-wishlist/edit-wishlist.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './header/home/home.component';
 
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'library', component: LibraryComponent },
+  { path: 'wishlist', component: WishlistComponent },
+  { path: 'librarian', component: LibrarianComponent },
+  { path: 'find-book', component: FindBookComponent }
+
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,10 +35,12 @@ import { DropdownDirective } from './shared/dropdown.directive';
     EditLibraryListComponent,
     WishlistListComponent,
     EditWishlistComponent,
-    DropdownDirective
+    DropdownDirective,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
