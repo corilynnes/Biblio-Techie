@@ -1,7 +1,9 @@
-.bg{
-    background-image: url('https://photos.google.com/photo/AF1QipPbDmEk0PpkUZaDXgiitUMOd_Uhq-3ljxdtOnGF');
-    height:100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.image{
+    background-image: url('C:\Users\My Shit\Code Projects\Biblio_Techie\BiblioTechie\src\assets\images\thought-catalog-o0Qqw21-0NI-unsplash (1).jpg');
+   
+        height:40em; background-size:cover; width:auto;
+        
+        background-position:50% 50%;
+      
 }
+
