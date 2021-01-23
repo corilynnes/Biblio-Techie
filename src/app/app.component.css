@@ -1,8 +1,10 @@
 .image{
     background-image: url('C:\Users\My Shit\Code Projects\Biblio_Techie\BiblioTechie\src\assets\images\thought-catalog-o0Qqw21-0NI-unsplash (1).jpg');
    
-        height:40em; background-size:cover; width:auto;
-        
+        height:43em;
+         background-size:cover; 
+         width:auto;
+        padding-top:10px;
         background-position:50% 50%;
       
 }
