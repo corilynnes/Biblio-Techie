@@ -1,1 +1,34 @@
-<p>Welcome to the home page</p>
+<div class="container">
+    <div class="row">
+        <div id="list-form" class="col-sm-3">
+            <h3 >CURRENTLY <br>READING</h3>
+            <form>
+                
+                <!-- <label>TITLE </label> -->
+                <input type="text" name="title" placeholder="TITLE"><br>
+                <!-- <label>AUTHOR </label> -->
+                <input type="text" name="author" placeholder="AUTHOR"><br>
+
+                <!-- <input type="radio"  name="bookType" value="fiction">
+                <label for="fiction">FICTION</label>     
+                <input class="radioTwo" type="radio"  name="bookType" value="nonfiction">
+                <label  for="nonfiction">NONFICTION</label><br> -->
+
+                <select id="type" name="type" >
+                    <option value="" disabled selected>SELECT BOOK TYPE</option>
+                    <option value="fiction">FICTION</option>
+                    <option value="nonfiction">NONFICTION</option>
+                </select><br>
+
+
+                <input type="radio" name="readStatus" value="read">
+                <label for="read">READ </label>
+                <input class="radioTwo" type="radio" name="readStatus" value="needToRead">
+                <label for="needToRead">NEED TO READ</label><br>
+
+                <input type="submit" value="ADD BOOK">
+
+            </form>
+        </div>
+    </div>
+</div>
