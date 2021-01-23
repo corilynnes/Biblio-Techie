@@ -9,4 +9,8 @@
 
 .app{
     font-family:'Brandon Grotesque','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+}
+.container{
+    justify-content:center;
 }

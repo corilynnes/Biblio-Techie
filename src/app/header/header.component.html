@@ -5,7 +5,7 @@
             <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
                 <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
             </button>
-            <a [routerLink]="['/']" class="navbar-brand">Title I cant get centered</a>
+            <a [routerLink]="['/']" class="navbar-brand title">Title I cant get centered</a>
         </div>
 
         <div class="navbar-collapse nav navbar-nav navbar-left" [class.collapse]="collapsed"
@@ -18,7 +18,7 @@
                         <li><a [routerLink]="['/library']">Library</a></li>
                         <li><a [routerLink]="['/wishlist']">Wishlist</a></li>
                         <li><a [routerLink]="['/find-book']">Find Book</a></li>
-                        <li><a [routerLink]="['/librarian']">Librarian Techie</a></li>
+                        <li><a [routerLink]="['/librarian']">Your Librarian Techie</a></li>
                     </ul>
                 </li>
             </ul>
