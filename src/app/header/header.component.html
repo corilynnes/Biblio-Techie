@@ -5,16 +5,17 @@
             <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
                 <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
             </button>
-            <a [routerLink]="['/']" class="navbar-brand title">Title I cant get centered</a>
+            <a [routerLink]="['/']" class="navbar-brand title">BIBLIO TECHIE</a>
         </div>
 
-        <div class="navbar-collapse nav navbar-nav navbar-left" [class.collapse]="collapsed"
+        <div class="navbar-collapse nav navbar-nav navbar-right" [class.collapse]="collapsed"
             (window:resize)="collapsed = true">
         
             <ul class="nav navbar-nav">
                 <li class="dropdown" appDropdown>
-                    <a routerLink="#" class="dropdown-toggle" role="button"> &#9776; Services</a>
+                    <a routerLink="#" class="dropdown-toggle" role="button"> &#9776;</a>
                     <ul class="dropdown-menu">
+                        <li><a [routerLink]="['']">Add A Book</a></li>
                         <li><a [routerLink]="['/library']">Library</a></li>
                         <li><a [routerLink]="['/wishlist']">Wishlist</a></li>
                         <li><a [routerLink]="['/find-book']">Find Book</a></li>
@@ -24,12 +25,12 @@
             </ul>
         </div>
 
-        <div class="navbar-collapse nav navbar-nav navbar-right" [class.collapse]="collapsed"
+        <!-- <div class="navbar-collapse nav navbar-nav navbar-right" [class.collapse]="collapsed"
             (window:resize)="collapsed = true">
             <ul class="nav navbar-nav">
                 <li><a [routerLink]="['/find-book']">Find A Book</a></li>
             </ul>
-        </div>
+        </div> -->
 
         
 

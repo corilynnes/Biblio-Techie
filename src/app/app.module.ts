@@ -14,6 +14,7 @@ import { EditWishlistComponent } from './header/wishlist/edit-wishlist/edit-wish
 import { DropdownDirective } from './shared/dropdown.directive';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './header/home/home.component';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -40,6 +41,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

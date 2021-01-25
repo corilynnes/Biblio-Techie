@@ -1,31 +1,35 @@
 
 .librarian{
-  padding-top:16px;
+  /* padding-top:16px; */
+  margin-top: 5%;
+  
 }
 
 .about-me{
-    margin-top: 5%;
-    padding: 1px;
+    
+    padding-bottom: 1px;
     background-color: rgb(40, 40, 40);
     color: rgb(242, 242, 242);
+  margin: none;
   
 }
 
 h3{
     text-align: center;
+    padding: 15px 0px 3px 0px;
    
 }
 p{
-    padding: 0px 20px 9px 20px;
+    padding: 10px 20px 10px 20px;
     text-align: center;
+    background-color: rgb(65, 65, 65);
 }
 
 .librarian-table{
    
-   
    justify-content:center;
    background-color: rgb(242, 242, 242);
-
+   
 }
 
 .button{
@@ -54,7 +58,7 @@ p{
     
       width: 40%;
       color: rgb(114, 113, 113);
-      border-bottom: 1px solid rgb(242, 242, 242);
+      border-bottom: 1px solid rgb(224, 224, 224);
   }
 
   th {

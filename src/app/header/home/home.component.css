@@ -3,7 +3,8 @@
     margin-top: 10%;
     background-color: rgb(242, 242, 242);
     justify-content: center;
-    padding:3px 0px 20px 0px;
+    padding:3px 7px 20px 7px;
+    text-align: center;
   }
   
 .title{
@@ -44,7 +45,7 @@ margin-left: 10px;
   }
 
   
-input[type="submit"]{
+.btn {
     background-color: rgb(40, 40, 40);
    font-size: 9px;
    border: none;
@@ -55,7 +56,12 @@ input[type="submit"]{
 
 }
   
-input[type="submit"]:hover {
+.btn:hover {
     background-color: rgb(242, 242, 242);
     color: rgb(36, 36, 36);
+    border:none;
+  }
+
+  input.ng-invalid.ng-touched,  select.ng-invalid.ng-touched{
+    border: 1px solid red;
   }

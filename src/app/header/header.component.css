@@ -1,0 +1,12 @@
+.dropdown-toggle{
+    background-color: rgb(40, 40, 40);
+    padding: 10px 15px 10px 15px;
+    margin-top:15%;
+    color: rgb(242, 242, 242);
+    border-radius: 2px;;
+}
+
+.navbar-brand title{
+    color:rgb(190, 35, 35) ;
+
+}
