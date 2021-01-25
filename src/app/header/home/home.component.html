@@ -21,11 +21,19 @@
                         <option value="nonfiction">NONFICTION</option>
                     </select><br>
 
+                    <!------>
+                    <div class='radio-box'>
 
-                    <input type="radio" ngModel required name="readStatus" value="read">
-                    <label for="read">READ </label>
-                    <input class="radioTwo" type="radio" name="readStatus" value="needToRead">
-                    <label for="needToRead">NEED TO READ</label><br>
+                        <div class="radio" *ngFor="let statusType of status" required>
+                            <label>
+                                <input type="radio" name="statusType" ngModel [value]="statusType">{{statusType}}
+                            </label>
+                        </div>
+
+                    </div>
+                    <!------>
+
+
                     <p *ngIf="!bookData.valid && bookData.touched">Book information is invalid</p>
                     <button class="btn btn-primary" [disabled]="!f.valid" type="submit">ADD TO LIBRARY</button>
                 </div>

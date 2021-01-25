@@ -39,7 +39,9 @@ p{
     padding: 7px 25px 7px 25px;
     color: rgb(242, 242, 242);
     transition-duration: 0.4s;
-     margin: 10px 15px 10px 0px;
+     
+     margin: 10px 10px 10px 30px;
+    
 
 }
   
@@ -47,16 +49,22 @@ p{
     background-color: rgb(242, 242, 242);
     color: rgb(36, 36, 36);
   }
-
+.fiction{
+  width: 10%;
+  padding-right:15px;
+  background: coral;
+ 
+}
 .button-position{
-   padding-left:80px;
+ 
     width: 20%;
+   
    
 }
   td{
     padding-left: 15px;
     
-      width: 40%;
+      width: 30%;
       color: rgb(114, 113, 113);
       border-bottom: 1px solid rgb(224, 224, 224);
   }

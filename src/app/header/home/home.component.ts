@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
 @ViewChild('f') bookList: NgForm;
-
+status= ['READ', 'NOT READ'];
   constructor() { }
 
 // onAddBook(form:NgForm){
