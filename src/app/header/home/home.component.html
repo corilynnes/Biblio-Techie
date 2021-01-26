@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div id="list-form" class="col-sm-3">
+        <div id="list-form" class="col-md-3">
             <h3>CURRENTLY <br>READING</h3>
 
             <form (ngSubmit)="onAddBook()" #f="ngForm">
@@ -24,9 +24,9 @@
                     <!------>
                     <div class='radio-box'>
 
-                        <div class="radio" *ngFor="let statusType of status" required>
+                        <div class="radio" *ngFor="let status of statuses" required>
                             <label>
-                                <input type="radio" name="statusType" ngModel [value]="statusType">{{statusType}}
+                                <input type="radio" name="status" ngModel [value]="status">{{status}}
                             </label>
                         </div>
 
@@ -38,6 +38,7 @@
                     <button class="btn btn-primary" [disabled]="!f.valid" type="submit">ADD TO LIBRARY</button>
                 </div>
             </form>
+          
             <button class="btn btn-primary" [routerLink]="['/library']">GO TO LIBRARY</button>
         </div>
     </div>
