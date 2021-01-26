@@ -8,9 +8,9 @@ import { NgForm } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
 @ViewChild('f') bookList: NgForm;
-statuses= ['READ', 'NOT READ'];
+statuses= ['Read', 'Not Read'];
 book = {  title: '', author: '', bookType:'', readStatus:''};
-
+userLibrary = [];
 
   constructor() { }
 
@@ -22,6 +22,8 @@ onAddBook(){
   this.book.author= this.bookList.value.bookData.author;
   this.book.bookType= this.bookList.value.bookData.type;
   this.book.readStatus= this.bookList.value.bookData.status;
+  this.userLibrary.push(this.book);
+  // console.log(this.userLibrary);
 }
 
   ngOnInit(): void {

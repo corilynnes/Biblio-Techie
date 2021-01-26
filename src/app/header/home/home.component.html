@@ -38,7 +38,7 @@
                     <button class="btn btn-primary" [disabled]="!f.valid" type="submit">ADD TO LIBRARY</button>
                 </div>
             </form>
-          
+          <p *ngFor="let book of userLibrary"> {{book.title}} {{book.author}}</p>
             <button class="btn btn-primary" [routerLink]="['/library']">GO TO LIBRARY</button>
         </div>
     </div>
