@@ -1,3 +1,4 @@
+import { useAnimation } from '@angular/animations';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
@@ -22,8 +23,8 @@ onAddBook(){
   this.book.author= this.bookList.value.bookData.author;
   this.book.bookType= this.bookList.value.bookData.type;
   this.book.readStatus= this.bookList.value.bookData.status;
-  this.userLibrary.push(this.book);
-  // console.log(this.userLibrary);
+ 
+  console.log(this.userLibrary);
 }
 
   ngOnInit(): void {
