@@ -1,10 +1,31 @@
-<div class="container">
-    <div class="row">
-        <div id="list-form" class="col-med-12">
-           
-              <!-- <p > {{book_image}} {{title}} {{author}}</p> -->
-           
-           
-        </div>
+
+<div class="nyt-list col-md-12">
+
+    <div class="about-me"><h3>NEW YORK TIMES CURRENT BEST SELLERS</h3>
+    <p>
+My name is Cori. I created Biblio Techie as a way to help organize reading lists and help boost motivation to bust those 
+lists out. I was an avid reader when I was younger, but that slowly changed as I got older. A goal of mine is to start
+making a dent in my large physical and digital library like I use to do. Biblio Techie helps keep track of not only you
+current library and what you have already read, but what books you are itching to add it it. Use the store finder to find a 
+a local bookstore to pick up your new adventure. <br><br>
+If you're a little lost on where to start, check out some of my favorite reads below. Who knows, maybe you'll find your new favorite story!
+    </p>
     </div>
-</div>
+
+    <table class="nyt-table" style="width:100%">
+        <tr>
+            <th class= "book-image"></th>
+            <th class="title-col">TITLE</th>
+            <th class="author-col">AUTHOR</th>
+            <th class="desc-col">DESCRIPTION</th>
+        </tr>
+        <tr *ngFor = "let book of listArray">
+            <td class="book-image"><img src='{{ book.book_image }}'></td>
+            <td class="author-col">{{ book.title | titlecase }}</td>
+            <td class="author-col">{{ book.author }}</td>
+            <td class="desc-col">{{ book.description }}</td>
+        </tr>
+       
+    </table>
+
+</div>  

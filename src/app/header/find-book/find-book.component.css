@@ -1,62 +1,69 @@
-#list-form{
-    margin-top: 10%;
-    background-color: rgb(242, 242, 242);
-    justify-content: center;
-    padding:3px 0px 20px 0px;
-  }
 
-  #map{
-    margin-top: 5%;
-    margin-left:30px;
-    background-color: rgb(242, 242, 242);
-    justify-content: center;
-    padding:3px 0px 20px 0px;
-    width: 60em;
-    height: 27em;
-}
+
+.nyt-list{
+  /* padding-top:16px; */
+  margin-top: 5%;
   
-.title{
-    color: black;
-    font-size: 60px;
+  
 }
 
-form{
-    text-align: center;
+.about-me{
     
+    padding-bottom: 1px;
+    background-color: rgb(40, 40, 40);
+    color: rgb(242, 242, 242);
+  margin: none;
+  
 }
 
 h3{
     text-align: center;
-    color:  rgb(40, 40, 40);;
+    padding: 15px 0px 3px 0px;
+   
+}
+p{
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    background-color: rgb(65, 65, 65);
 }
 
-
-  input[type="text"] {  
-    width: 75%;
-    color: rgb(114, 113, 113);
-    font-size: 10px;
-    padding: 3px 0px 3px 0px;
-  }
-
-  
-input{
-    margin: 0px 0px 10px 0px;
+.nyt-table{
+   
+   justify-content:center;
+   background-color: rgb(242, 242, 242);
+   
 }
 
-
-  
-input[type="submit"]{
+.button{
     background-color: rgb(40, 40, 40);
-   font-size: 9px;
-   border: none;
-   padding: 7px 25px 7px 25px;
+    font-size: 9px;
+    border: none;
+    padding: 7px 25px 7px 25px;
     color: rgb(242, 242, 242);
     transition-duration: 0.4s;
-     margin: 10px 15px 0px 0px;
+     
+     margin: 10px 10px 10px 30px;
+    
 
 }
-  
-input[type="submit"]:hover {
-    background-color: rgb(242, 242, 242);
-    color: rgb(36, 36, 36);
+img{
+  height:140px;
+  padding: 15px;
+
+}
+
+  td{
+      padding: 0px 25px 0px 15px;
+       color: rgb(114, 113, 113);
+      border-bottom: 1px solid rgb(224, 224, 224);
   }
+
+  th {
+      padding: 15px 0px 0px 15px;
+  }
+
+  .title-col, .author-col{
+    width:20%;
+  }
+
+  

@@ -16,6 +16,8 @@ import { HomeComponent } from './header/home/home.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 
+
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'library', component: LibraryComponent }, 
@@ -26,7 +28,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-      LibraryComponent,
+    LibraryComponent,
     LibrarianComponent,
     FindBookComponent,
     HeaderComponent,
@@ -38,7 +40,9 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+   
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
