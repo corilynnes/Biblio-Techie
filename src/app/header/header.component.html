@@ -10,30 +10,18 @@
 
         <div class="navbar-collapse nav navbar-nav navbar-right" [class.collapse]="collapsed"
             (window:resize)="collapsed = true">
-        
+
             <ul class="nav navbar-nav">
                 <li class="dropdown" appDropdown>
                     <a routerLink="#" class="dropdown-toggle" role="button"> &#9776;</a>
                     <ul class="dropdown-menu">
                         <li><a [routerLink]="['']">Add A Book</a></li>
                         <li><a [routerLink]="['/library']">Library</a></li>
-                        <!-- <li><a [routerLink]="['/wishlist']">Wishlist</a></li> -->
-                        <li><a [routerLink]="['/find-book']">Find Book</a></li>
+                        <li><a [routerLink]="['/find-book']">Current Best Sellers</a></li>
                         <li><a [routerLink]="['/librarian']">Your Librarian Techie</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
-
-        <!-- <div class="navbar-collapse nav navbar-nav navbar-right" [class.collapse]="collapsed"
-            (window:resize)="collapsed = true">
-            <ul class="nav navbar-nav">
-                <li><a [routerLink]="['/find-book']">Find A Book</a></li>
-            </ul>
-        </div> -->
-
-        
-
-
     </div>
 </nav>
