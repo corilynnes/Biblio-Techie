@@ -1,0 +1,73 @@
+
+
+.library-list{
+    /* padding-top:16px; */
+    margin: 5% 0% 5% 0%;
+    
+    
+  }
+  
+  .add-form{
+      
+      padding-bottom: 1px;
+      background-color: rgb(40, 40, 40);
+      color: rgb(242, 242, 242);
+    margin: none;
+    
+  }
+  
+  h3{
+      text-align: center;
+      padding: 15px 0px 3px 0px;
+     
+  }
+  p{
+      padding: 10px 20px 10px 20px;
+      text-align: center;
+      background-color: rgb(65, 65, 65);
+  }
+  
+  .user-library{
+     
+     justify-content:center;
+     background-color: rgb(242, 242, 242);
+     
+  }
+  
+  .button{
+      background-color: rgb(40, 40, 40);
+      font-size: 9px;
+      border: none;
+      padding: 7px 25px 7px 25px;
+      color: rgb(242, 242, 242);
+      transition-duration: 0.4s;
+       
+       margin: 10px 10px 10px 30px;
+      
+  
+  }
+  img{
+    height:140px;
+    padding: 15px;
+  
+  }
+  
+    td{
+        padding: 0px 25px 0px 15px;
+         color: rgb(114, 113, 113);
+        border-bottom: 1px solid rgb(224, 224, 224);
+    }
+  
+    th {
+        padding: 15px 0px 0px 15px;
+    }
+  
+    .title-col,.author-col{
+      width:30%;
+    }
+  
+
+    .fic-col, .read-col {
+        width:20%;
+      }
+    

@@ -40,9 +40,33 @@
 
                 </div>
             </form>
-            
+            <p>{{userLibrary}}</p>
          
             <button class="btn btn-primary" [routerLink]="['/library']">GO TO LIBRARY</button>
         </div>
     </div>
+
+<!--------->
+    <div class="library-list col-md-12">
+
+     <br>
+        <table class="user-library" style="width:100%">
+            <tr>
+                <th class="title-col">TITLE</th>
+                <th class="author-col">AUTHOR</th>
+                <th class="fic-col">FICTION/NONFICTION</th>
+                <th class="read-col">READ</th>
+            </tr>
+            <tr *ngFor="let books of userLibrary">
+                <td class="book-image">{{books.title}}</td>
+                <td class="author-col">{{books.author}}</td>
+                <td class="fic-col">{{books.bookType}}</td>
+                <td class="read-col"><input type="checkbox"  ngChecked = "books.readStatus == 'Read'" ></td>
+            </tr>
+    
+        </table>
+    
+    </div>
+
+    <!--------->
 </div>

@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { LibraryComponent } from './header/library/library.component';
-import { LibrarianComponent } from './header/library/librarian/librarian.component';
+import { LibrarianComponent } from './header/librarian/librarian.component';
 import { FindBookComponent } from './header/find-book/find-book.component';
 import { HeaderComponent } from './header/header.component';
 import { LibraryListComponent } from './header/library/library-list/library-list.component';
 
 
-import { DropdownDirective } from './shared/dropdown.directive';
+import { DropdownDirective } from './header/shared/dropdown.directive';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './header/home/home.component';
 import { FormsModule } from '@angular/forms';
