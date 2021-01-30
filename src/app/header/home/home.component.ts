@@ -1,7 +1,7 @@
 
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Librarybook } from '../library/librarybook.model';
+
 
 @Component({
   selector: 'app-home',
@@ -12,13 +12,11 @@ export class HomeComponent implements OnInit {
   @ViewChild('f') bookList: NgForm;
   statuses = ['Read', 'Not Read'];
   // book = {  title: '', author: '', bookType:'', readStatus:''};
-  userLibrary = [];
+  @Input() userLibrary = []; 
 
   constructor() { }
 
-  // onAddBook(form:NgForm){
-  //   console.log(form);
-  // }
+
   onAddBook() {
     let book = {
       title: this.bookList.value.bookData.title,

@@ -1,4 +1,5 @@
-<div class="librarian col-md-12">
+
+    <div class="librarian col-md-10 d-flex justify-content-center">
 
     <div class="about-me"><h3>WELCOME TO BIBLIO TECHIE</h3>
     <p>
@@ -12,16 +13,18 @@ If you're a little lost on where to start, check out my current book pile below.
 
     <table class="librarian-table" style="width:100%">
         <tr>
+            <th></th>
             <th>TITLE</th>
             <th>AUTHOR</th>
             <!-- <th class="fiction">FICTION/NONFICTION</th> -->
-            <th ></th>
+            <!-- <th ></th> -->
         </tr>
         <tr *ngFor = "let books of list">
-            <td>{{books.title}}</td>
-            <td>{{books.author}}</td>
+            <td class="book-image"><img src="{{ books.book_image }}"></td>
+            <td class="title">{{books.title}}</td>
+            <td class="author">{{books.author}}</td>
             <!-- <td class="fiction">Type</td> -->
-            <td class="button-position"><button class="button" type="button">ADD TO LIBRARY</button></td>
+            <!-- <td class="button-position"><button class="button" type="button">ADD TO LIBRARY</button></td> -->
         </tr>
             
     </table>

@@ -1,9 +1,8 @@
 
 .librarian{
   /* padding-top:16px; */
-  margin: 5% 0% 5% 0%;
-
-  
+  margin: 5% 10% 5% 10%;
+ 
 }
 
 .about-me{
@@ -13,6 +12,12 @@
     color: rgb(242, 242, 242);
   margin: none;
   
+}
+
+img{
+  height:140px;
+  padding: 15px;
+
 }
 
 h3{
@@ -28,12 +33,12 @@ p{
 
 .librarian-table{
    
-   justify-content:center;
+   /* justify-content:center; */
    background-color: rgb(242, 242, 242);
    
 }
 
-.button{
+/* .button{
     background-color: rgb(40, 40, 40);
     font-size: 9px;
     border: none;
@@ -44,32 +49,36 @@ p{
      margin: 10px 10px 10px 30px;
     
 
+} */
+.title{
+  width:50%;
 }
-  
-  .button:hover {
+
+  .author{
+    width: 30%;
+  }
+  .book-image{
+    width:20%
+  }
+
+  td{
+    padding: 0px 25px 0px 15px;
+     color: rgb(114, 113, 113);
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+th {
+    padding: 15px 0px 0px 15px;
+}
+
+  /* .button:hover {
     background-color: rgb(242, 242, 242);
     color: rgb(36, 36, 36);
-  }
-.fiction{
-  width: 10%;
-  padding-right:15px;
-  background: coral;
- 
-}
-.button-position{
+  } */
+
+/* .button-position{
  
     width: 20%;
    
    
-}
-  td{
-    padding-left: 15px;
-    
-      width: 30%;
-      color: rgb(114, 113, 113);
-      border-bottom: 1px solid rgb(224, 224, 224);
-  }
-
-  th {
-      padding: 15px 0px 0px 15px;
-  }
+} */

@@ -14,11 +14,11 @@
             <th class="fic-col">FICTION/NONFICTION</th>
             <th class="read-col">READ</th>
         </tr>
-        <tr >
-            <td class="book-image">#</td>
-            <td class="author-col">#</td>
-            <td class="fic-col">#</td>
-            <td class="read-col">#</td>
+        <tr *ngFor="let books of userLibrary" [userLibrary] = "userLibrary">
+            <td class="book-image">{{books.title}}</td>
+            <td class="author-col">{{books.author}}</td>
+            <td class="fic-col">{{books.bookType}}</td>
+            <td class="read-col"><input type="checkbox"  ngChecked = "books.readStatus == 'Read'" ></td>
         </tr>
 
     </table>

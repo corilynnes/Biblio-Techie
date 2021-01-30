@@ -7,14 +7,15 @@ import { LibraryComponent } from './header/library/library.component';
 import { LibrarianComponent } from './header/librarian/librarian.component';
 import { FindBookComponent } from './header/find-book/find-book.component';
 import { HeaderComponent } from './header/header.component';
-import { LibraryListComponent } from './header/library/library-list/library-list.component';
 
 
-import { DropdownDirective } from './header/shared/dropdown.directive';
+
+
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './header/home/home.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { DropdownDirective } from './header/shared/dropdown.directive';
 
 
 
@@ -32,8 +33,8 @@ const appRoutes: Routes = [
     LibrarianComponent,
     FindBookComponent,
     HeaderComponent,
-    LibraryListComponent, 
-    DropdownDirective,
+    
+  DropdownDirective,
     HomeComponent
   ],
   imports: [
