@@ -1,21 +1,31 @@
 
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { LibraryListService } from '../shared/library-list.service';
+
 
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  providers: [LibraryListService]
 })
 export class HomeComponent implements OnInit {
   @ViewChild('f') bookList: NgForm;
   statuses = ['Read', 'Not Read'];
   // book = {  title: '', author: '', bookType:'', readStatus:''};
-  @Input() userLibrary = []; 
+  userLibrary=[];
 
-  constructor() { }
+  constructor(private libraryListService: LibraryListService) { 
 
+  }
+
+  ngOnInit(): void {
+    this.userLibrary = this.libraryListService.getUserLibrary();
+   
+  }
+  
 
   onAddBook() {
     let book = {
@@ -24,15 +34,16 @@ export class HomeComponent implements OnInit {
       bookType: this.bookList.value.bookData.type,
       readStatus: this.bookList.value.bookData.status
     }
-    
-    this.userLibrary.push(book);
+    this.bookList.reset();
+    // this.userLibrary.push(book);
+    this.libraryListService.addBook(book);
     console.log(this.userLibrary);
 
 
 
   }
 
-  ngOnInit(): void {}
-   
+  
 
 }
+

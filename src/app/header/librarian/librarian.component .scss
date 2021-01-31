@@ -1,4 +1,4 @@
-
+$soft-white:rgb(242, 242, 242);
 .librarian{
   /* padding-top:16px; */
   margin: 5% 10% 5% 10%;
@@ -9,7 +9,7 @@
     
     padding-bottom: 1px;
     background-color: rgb(40, 40, 40);
-    color: rgb(242, 242, 242);
+    color: $soft-white;
   margin: none;
   
 }
@@ -34,7 +34,7 @@ p{
 .librarian-table{
    
    /* justify-content:center; */
-   background-color: rgb(242, 242, 242);
+   background-color:$soft-white;
    
 }
 

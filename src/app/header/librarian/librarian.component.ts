@@ -4,7 +4,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-librarian',
   templateUrl: './librarian.component.html',
-  styleUrls: ['./librarian.component.css']
+  styleUrls: ['./librarian.component .scss']
 })
 export class LibrarianComponent implements OnInit {
   list= [

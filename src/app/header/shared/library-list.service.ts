@@ -1,14 +1,26 @@
-import { Injectable } from "@angular/core";
-import { Librarybook } from "../library/librarybook.model";
+import { EventEmitter, Injectable } from "@angular/core";
 
-@Injectable()
+
+// @Injectable()
 
 
 export class LibraryListService {
-    public libraryBook: Librarybook[] = [];
+ 
+ userLibraryChanged = new EventEmitter();
+ userLibrary=[{title:'tom'}];
 
 
-constructor(){}
+
+getUserLibrary(){
+    return this.userLibrary;
+}
+
+
+addBook(book){
+    this.userLibrary.push(book);
+    this.userLibraryChanged.emit(this.userLibrary);
+}
+
 
 
 
