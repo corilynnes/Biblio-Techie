@@ -1,7 +1,8 @@
 
-import { Component, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { LibraryListService } from '../shared/library-list.service';
+import { Librarybook } from '../library/librarybook.model';
+import { LocalStorageService } from '../shared/local-storage.service';
 
 
 
@@ -9,41 +10,38 @@ import { LibraryListService } from '../shared/library-list.service';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [LibraryListService]
+  providers: [LocalStorageService]
 })
 export class HomeComponent implements OnInit {
-  @ViewChild('f') bookList: NgForm;
-  statuses = ['Read', 'Not Read'];
-  // book = {  title: '', author: '', bookType:'', readStatus:''};
-  userLibrary=[];
+  @ViewChild('f', {static:false}) bookList: NgForm;
+  statuses = ['Read', 'Need To Read'];
+  userLibrary = [];
 
-  constructor(private libraryListService: LibraryListService) { 
+  constructor(private localStorageService: LocalStorageService) {
 
   }
 
   ngOnInit(): void {
-    this.userLibrary = this.libraryListService.getUserLibrary();
-   
+    this.userLibrary = JSON.parse(localStorage.getItem("books"));
+
   }
-  
+
 
   onAddBook() {
-    let book = {
-      title: this.bookList.value.bookData.title,
-      author: this.bookList.value.bookData.author,
-      bookType: this.bookList.value.bookData.type,
-      readStatus: this.bookList.value.bookData.status
-    }
+    const title = this.bookList.value.bookData.title;
+    const author = this.bookList.value.bookData.author;
+    const type = this.bookList.value.bookData.type;
+    const status = this.bookList.value.bookData.status;
+    const newLibraryBook = new Librarybook(title, author, type, status)
+this.userLibrary.push(newLibraryBook);
+
+this.localStorageService.setItem("books", JSON.stringify(this.userLibrary));
     this.bookList.reset();
-    // this.userLibrary.push(book);
-    this.libraryListService.addBook(book);
+    
     console.log(this.userLibrary);
-
-
-
   }
 
-  
+
 
 }
 

@@ -15,10 +15,10 @@
             <th class="read-col">READ</th>
         </tr>
         <tr *ngFor="let books of userLibrary">
-            <td class="title-col">{{books.title}}</td>
-            <td class="author-col">{{books.author}}</td>
-            <td class="fic-col">{{books.bookType}}</td>
-            <td class="read-col"><input type="checkbox"  ngChecked = "books.readStatus == 'Read'" ></td>
+            <td class="title-col">{{books.title | titlecase}}</td>
+            <td class="author-col">{{books.author | titlecase}}</td>
+            <td class="fic-col">{{books.bookType | titlecase}}</td>
+            <td class="fic-col">{{books.readStatus | titlecase}}</td>
         </tr>
 
     </table>

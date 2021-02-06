@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { LibraryListService } from './shared/library-list.service';
+import { LocalStorageService } from './shared/local-storage.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  providers: [LibraryListService]
+  providers: [LocalStorageService]
 })
 export class HeaderComponent implements OnInit {
   collapsed = true;

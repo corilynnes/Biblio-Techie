@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { DropdownDirective } from './header/shared/dropdown.directive';
 
+ 
 
 
 const appRoutes: Routes = [
@@ -35,14 +36,15 @@ const appRoutes: Routes = [
     HeaderComponent,
     
   DropdownDirective,
-    HomeComponent
+    HomeComponent,
+   
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
-   
+
    
   ],
   providers: [],

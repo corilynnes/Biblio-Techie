@@ -10,11 +10,6 @@
 
                     <input type="text" placeholder="AUTHOR" ngModel name="author" required><br>
 
-                    <!-- <input type="radio"  name="bookType" value="fiction">
-                <label for="fiction">FICTION</label>     
-                <input class="radioTwo" type="radio"  name="bookType" value="nonfiction">
-                <label  for="nonfiction">NONFICTION</label><br> -->
-
                     <select id="type" ngModel required name="type">
                         <option value="" disabled selected>SELECT BOOK TYPE</option>
                         <option value="fiction">FICTION</option>
@@ -37,12 +32,11 @@
                     <p *ngIf="!bookData.valid && bookData.touched">Book information is invalid</p>
                     <button class="btn btn-primary" [disabled]="!f.valid" type="submit">ADD TO LIBRARY</button>
 
-
                 </div>
             </form>
             
             <button class="btn btn-primary" [routerLink]="['/library']">GO TO LIBRARY</button>
+          
         </div>
-        <app-library></app-library>
-    </div>
+         </div>
 </div>
