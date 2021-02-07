@@ -21,8 +21,11 @@ describe('LibrarianComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should create app', () => {
+    let fixture = TestBed.createComponent(LibrarianComponent);
+    let app = fixture.debugElement.componentInstance;
+
+    expect(app).toBeTruthy();
   });
 
   it('should render title in a h3 tag', async() => {
@@ -32,6 +35,12 @@ describe('LibrarianComponent', () => {
     expect(complied.querySelector('h3').textContent).toContain('WELCOME TO BIBLIO TECHIE');
   });
 
+  // it('should pull correct book title', async() => {
+  //   let fixture = TestBed.createComponent(LibrarianComponent);
+  //   fixture.detectChanges();
+  //   let complied = fixture.debugElement.nativeElement;
+  //   expect(complied.querySelector('h3').textContent).toContain('WELCOME TO BIBLIO TECHIE');
+  // });
 
   
 });

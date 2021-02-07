@@ -21,16 +21,19 @@ describe('FindBookComponent', () => {
     fixture.detectChanges();
   });
 
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
+  // it('should create a', () => {
+  //   let fixture = TestBed.createComponent(FindBookComponent);
+  //   let component = fixture.debugElement.componentInstance;
 
-//   it('should render title in a h3 tag', async() => {
-//     let fixture = TestBed.createComponent(FindBookComponent);
-//     fixture.detectChanges();
-//     let complied = fixture.debugElement.nativeElement;
-//     expect(complied.querySelector('h3').textContent).toContain('NEW YORK TIMES CURRENT BEST SELLERS');
-//   });
+  //   expect(component).toBeTruthy();
+  // });
+
+  // it('should render title in a h3 tag', async() => {
+  //   let fixture = TestBed.createComponent(FindBookComponent);
+  //   fixture.detectChanges();
+  //   let complied = fixture.debugElement.nativeElement;
+  //   expect(complied.querySelector('h3').textContent).toContain('WELCOME TO BIBLIO TECHIE');
+  // });
 
 
   

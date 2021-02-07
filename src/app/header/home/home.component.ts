@@ -2,7 +2,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Librarybook } from '../library/librarybook.model';
-import { LocalStorageService } from '../shared/local-storage.service';
+import { StorageService } from '../shared/storage.service';
 
 
 
@@ -10,34 +10,38 @@ import { LocalStorageService } from '../shared/local-storage.service';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [LocalStorageService]
+  providers: [StorageService]
 })
 export class HomeComponent implements OnInit {
-  @ViewChild('f', {static:false}) bookList: NgForm;
+  @ViewChild('f', { static: false }) bookList: NgForm;
   statuses = ['Read', 'Need To Read'];
   userLibrary = [];
 
-  constructor(private localStorageService: LocalStorageService) {
+  constructor(private storageService: StorageService) {
 
   }
 
   ngOnInit(): void {
-    this.userLibrary = JSON.parse(localStorage.getItem("books"));
+  // this.userLibrary = JSON.parse(sessionStorage.getItem("books"));
+ 
 
   }
 
 
   onAddBook() {
+  this.userLibrary = JSON.parse(localStorage.getItem("books"));
+
     const title = this.bookList.value.bookData.title;
     const author = this.bookList.value.bookData.author;
     const type = this.bookList.value.bookData.type;
     const status = this.bookList.value.bookData.status;
     const newLibraryBook = new Librarybook(title, author, type, status)
-this.userLibrary.push(newLibraryBook);
+    this.userLibrary.push(newLibraryBook);
 
-this.localStorageService.setItem("books", JSON.stringify(this.userLibrary));
+    this.storageService.setItem("books", JSON.stringify(this.userLibrary));
     this.bookList.reset();
-    
+
+    console.log(newLibraryBook);
     console.log(this.userLibrary);
   }
 

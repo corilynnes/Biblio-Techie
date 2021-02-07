@@ -1,34 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { Librarybook } from './librarybook.model';
-import { LocalStorageService } from '../shared/local-storage.service';
+import { StorageService } from '../shared/storage.service';
 
 @Component({
   selector: 'app-library',
   templateUrl: './library.component.html',
   styleUrls: ['./library.component.css'],
-  providers: [LocalStorageService]
+  providers: [StorageService]
 })
 export class LibraryComponent implements OnInit {
-  userLibrary=[];
-  constructor(
-    private libraryListService: LocalStorageService
-    ) { }
+  userLibrary = [];
+  constructor(private storageService: StorageService) { }
 
   ngOnInit(): void {
     this.userLibrary = JSON.parse(localStorage.getItem("books"));
-    // this.userLibrary = this.libraryListService.getUserLibrary();
-    // this.libraryListService.userLibraryChanged
-    //   .subscribe(
-    //     (userLibrary: Librarybook[]) => {
-    //       this.userLibrary = userLibrary;
-    //       console.log(this.userLibrary);
-    //       console.log("Hey");
-    //     }
-    // );
-    // console.log(this.userLibrary);
- 
-
-   
   }
 
+  // onClearList() {
+  //   this.storageService.removeItem("books");
+  // }
 }
