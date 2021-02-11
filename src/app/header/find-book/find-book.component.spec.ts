@@ -1,25 +1,34 @@
-  
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FindBookComponent } from './find-book.component';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { FindBookComponent } from "./find-book.component";
+
+
+
 
 
 
 describe('FindBookComponent', () => {
-  let component: FindBookComponent;
-  let fixture: ComponentFixture<FindBookComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ FindBookComponent ]
-    })
-    .compileComponents();
-  });
+    let component: FindBookComponent;
+    let fixture: ComponentFixture<FindBookComponent>;
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(FindBookComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            declarations: [FindBookComponent]
+        })
+            .compileComponents();
+    });
 
-  
+    beforeEach(() => {
+        fixture = TestBed.createComponent(FindBookComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
+
+    // it('should create FindBook component', () => {
+    //     let fixture = TestBed.createComponent(FindBookComponent);
+    //     let app = fixture.debugElement.componentInstance;
+
+    //     expect(app).toBeTruthy();
+    // });
+
 });

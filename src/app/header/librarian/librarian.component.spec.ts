@@ -21,7 +21,7 @@ describe('LibrarianComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create app', () => {
+  it('should create Librarian component', () => {
     let fixture = TestBed.createComponent(LibrarianComponent);
     let app = fixture.debugElement.componentInstance;
 
